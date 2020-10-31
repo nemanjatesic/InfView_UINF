@@ -1,0 +1,593 @@
+{
+    "location": "MPS-Bolnica",
+    "name": "MPS-Bolnica",
+    "description": "MPS-Bolnica",
+    "type": "mssql",
+    "packages": 
+    [
+        {    
+            "name" : "Tables",
+            "username": "tim_201_2_ui2018",
+            "password": "A5![hrWb&\\~qP\\E",
+            "connection":"jdbc:jtds:sqlserver://147.91.175.155/tim_201_2_ui2018",
+		    "type":"dataBase",
+            "entities": 
+            [  {
+                    "name": "MPS_REGISTAR_ZAPOSLENIH",
+                    "type": "sqlTable",
+                    "url":"",
+                    "attributes": 
+                    [   
+                         {   "name": "IDENTIFIKATOR",
+                            "type": "Char",
+                            "length": "7",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                         {   "name": "ID1",
+                            "type": "Char",
+                            "length": "6",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+
+                        {   "name": "VO_OZNAKA",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "OJ_IDENTIFIKATOR",
+                            "type": "Numeric",
+                            "length": "10",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "IME",
+                            "type": "Varchar",
+                            "length": "40",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "PREZIME",
+                            "type": "Varchar",
+                            "length": "40",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "TELEFON",
+                            "type": "Varchar",
+                            "length": "40",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "MEJL",
+                            "type": "Varchar",
+                            "length": "40",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "ADRESA",
+                            "type": "Varchar",
+                            "length": "39",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "JMBG",
+                            "type": "Char",
+                            "length": "13",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "ID_OJ",
+                            "type": "Numeric",
+                            "length": "10",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                   {
+                   "name": "MPS_REGISTAR_MEDICINSKE_OPREME",
+                    "type": "sqlTable",
+                    "url":"",
+                    "attributes": 
+                    [   
+                         {   "name": "ID4",
+                            "type": "Char",
+                            "length": "7",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                         {   "name": "NAZIV",
+                            "type": "Varchar",
+                            "length": "30",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "OPIS",
+                           "type": "Varchar",
+                           "length": "1024",
+                           "mandatory": "false",
+                           "group": "0",
+                           "primaryKey": "false"
+                       }
+                    ]
+                },
+              {
+                   "name": "MPS_PROSTORIJE",
+                    "type": "sqlTable",
+                    "url":"",
+                    "attributes": 
+                    [   
+                        {   "name": "ID",
+                            "type": "Varchar",
+                            "length": "5",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "PS_ID",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                         {   "name": "MPS_PS_ID",
+                            "type": "Numeric",
+                            "length": "30",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+
+                        {   "name": "VO_OZNAKA",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "OJ_IDENTIFIKATOR",
+                            "type": "Numeric",
+                            "length": "30",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "NAZIV",
+                            "type": "Varchar",
+                            "length": "30",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "SPRAT",
+                            "type": "Numeric",
+                            "length": "18",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "TIP",
+                            "type": "Varchar",
+                            "length": "40",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "OZNAKA",
+                            "type": "Char",
+                            "length": "4",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                     ]
+                },
+              {
+                 "name": "mps_PREGLEDI",
+                 "type": "sqlTable",
+                 "url":"",
+                    "attributes": 
+                    [   
+                         {   "name": "ID_BR_FAJLA",
+                            "type": "Char",
+                            "length": "8",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                         {   "name": "ID1",
+                            "type": "Char",
+                            "length": "6",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+
+                        {   "name": "IDENTIFIKATOR",
+                            "type": "Char",
+                            "length": "7",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        }
+                     ]
+                },
+                {
+                    "name": "MPS_POZICIJE_ZAPOSLENIH",
+                    "type": "sqlTable",
+                    "url":"",
+                    "attributes": 
+                    [   
+                         {   "name": "ID1",
+                            "type": "Char",
+                            "length": "6",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                         {   "name": "NAZIV",
+                            "type": "Varchar",
+                            "length": "30",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+
+                        {   "name": "STEPEN_STRUCNE_SPREME",
+                            "type": "Varchar",
+                            "length": "10",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "MPS_PACIJENTI",
+                    "type": "sqlTable",
+                    "url":"",
+                    "attributes": 
+                    [   
+                         {   "name": "JMBG",
+                            "type": "Char",
+                            "length": "13",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                         {   "name": "IME",
+                            "type": "Varchar",
+                            "length": "40",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+
+                        {   "name": "PREZIME",
+                            "type": "Varchar",
+                            "length": "40",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "STAROST",
+                            "type": "Numeric",
+                            "length": "3",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "ID_BR_FAJLA",
+                            "type": "Char",
+                            "length": "8",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "PS_ID",
+                            "type": "Numeric",
+                            "length": "40",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "MPS_ORGANIZACIONE_JEDINICE",
+                    "type": "sqlTable",
+                    "url":"",
+                    "attributes": 
+                    [   
+                         {   "name": "PS_ID",
+                            "type": "Numeric",
+                            "length": "10",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                         {   "name": "VO_OZNAKA",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+
+                        {   "name": "OJ_IDENTIFIKATOR",
+                            "type": "Numeric",
+                            "length": "10",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "OJ_NAZIV",
+                            "type": "Varchar",
+                            "length": "120",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "mps_BORAVCI",
+                    "type": "sqlTable",
+                    "url":"",
+                    "attributes": 
+                    [   
+                         {   "name": "ID_BR_FAJLA",
+                            "type": "Char",
+                            "length": "8",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                         {   "name": "ID",
+                            "type": "Varchar",
+                            "length": "5",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        }
+                    ]
+                },
+                {
+                    "name": "mps_SADRZI",
+                    "type": "sqlTable",
+                    "url":"",
+                    "attributes": 
+                    [   
+                         {   "name": "ID",
+                            "type": "Varchar",
+                            "length": "5",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                         {   "name": "ID4",
+                            "type": "Char",
+                            "length": "7",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        }
+                    ]
+                },
+                {
+                    "name": "mps_SASTAV_ORGANIZACIONE_JEDINICE",
+                    "type": "sqlTable",
+                    "url":"",
+                    "attributes": 
+                    [   
+                         {   "name": "PS_ID",
+                            "type": "Numeric",
+                            "length": "10",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                         {   "name": "VO_OZNAKA",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "OJ_IDENTIFIKATOR",
+                           "type": "Numeric",
+                           "length": "10",
+                           "mandatory": "true",
+                           "group": "0",
+                           "primaryKey": "true"
+                       },
+                       {   "name": "MPS_PS_ID",
+                          "type": "Numeric",
+                          "length": "10",
+                          "mandatory": "true",
+                          "group": "0",
+                          "primaryKey": "true"
+                      },
+                      {   "name": "MPS_VO_OZNAKA",
+                         "type": "Char",
+                         "length": "2",
+                         "mandatory": "true",
+                         "group": "0",
+                         "primaryKey": "true"
+                     },
+                     {   "name": "MPS_OJ_IDENTIFIKATOR",
+                        "type": "Numeric",
+                        "length": "10",
+                        "mandatory": "true",
+                        "group": "0",
+                        "primaryKey": "true"
+                    }
+                    ]
+                },
+                {
+                    "name": "MPS_USLUGE",
+                    "type": "sqlTable",
+                    "url":"",
+                    "attributes": 
+                    [   
+                         {   "name": "ID3",
+                            "type": "Char",
+                            "length": "4",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                         {   "name": "VO_OZNAKA",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+
+                        {   "name": "NAZIV",
+                            "type": "Varchar",
+                            "length": "30",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "CENA",
+                            "type": "Varchar",
+                            "length": "30",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "OPIS",
+                            "type": "Varchar",
+                            "length": "1024",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "MPS_VRSTA_ORGANIZACIONE_JEDINICE",
+                    "type": "sqlTable",
+                    "url":"",
+                    "attributes": 
+                    [   
+                         {   "name": "VO_OZNAKA",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                         {   "name": "VO_NAZIV",
+                            "type": "Varchar",
+                            "length": "50",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                }
+           ],
+           "relations":
+           [
+               {
+                   "toEntity":"mps_SASTAV_ORGANIZACIONE_JEDINICE",
+                   "toAttribute":"OJ_IDENTIFIKATOR",
+                   "fromEntity":"MPS_ORGANIZACIONE_JEDINICE",
+                   "name":"relation 1",
+                   "fromAttribute":"OJ_IDENTIFIKATOR"
+               },
+               {
+                   "toEntity":"MPS_ORGANIZACIONE_JEDINICE",
+                   "toAttribute":"VO_OZNAKA",
+                   "fromEntity":"MPS_VRSTA_ORGANIZACIONE_JEDINICE",
+                   "name":"relation 2",
+                   "fromAttribute":"VO_OZNAKA"
+               },
+               {
+                   "toEntity":"MPS_USLUGE",
+                   "toAttribute":"VO_OZNAKA",
+                   "fromEntity":"MPS_VRSTA_ORGANIZACIONE_JEDINICE",
+                   "name":"relation 3",
+                   "fromAttribute":"VO_OZNAKA"
+               },
+               {
+                   "toEntity":"MPS_REGISTAR_ZAPOSLENIH",
+                   "toAttribute":"VO_OZNAKA",
+                   "fromEntity":"MPS_ORGANIZACIONE_JEDINICE",
+                   "name":"relation 4",
+                   "fromAttribute":"VO_OZNAKA"
+               },
+               {
+                   "toEntity":"mps_SADRZI",
+                   "toAttribute":"ID",
+                   "fromEntity":"MPS_PROSTORIJE",
+                   "name":"relation 5",
+                   "fromAttribute":"ID"
+               },
+               {
+                   "toEntity":"mps_SADRZI",
+                   "toAttribute":"ID4",
+                   "fromEntity":"MPS_REGISTAR_MEDICINSKE_OPREME",
+                   "name":"relation 6",
+                   "fromAttribute":"ID4"
+               },
+               {
+                   "toEntity":"MPS_ORGANIZACIONE_JEDINICE",
+                   "toAttribute":"OJ_IDENTIFIKATOR",
+                   "fromEntity":"MPS_PROSTORIJE",
+                   "name":"relation 7",
+                   "fromAttribute":"OJ_IDENTIFIKATOR"
+               },
+               {
+                   "toEntity":"mps_BORAVCI",
+                   "toAttribute":"ID",
+                   "fromEntity":"MPS_PROSTORIJE",
+                   "name":"relation 8",
+                   "fromAttribute":"ID"
+               },
+               {
+                   "toEntity":"mps_BORAVCI",
+                   "toAttribute":"ID_BR_FAJLA",
+                   "fromEntity":"MPS_PACIJENTI",
+                   "name":"relation 9",
+                   "fromAttribute":"ID_BR_FAJLA"
+               },
+               {
+                   "toEntity":"mps_PREGLEDI",
+                   "toAttribute":"IDENTIFIKATOR",
+                   "fromEntity":"MPS_REGISTAR_ZAPOSLENIH",
+                   "name":"relation 10",
+                   "fromAttribute":"IDENTIFIKATOR"
+               },
+               {
+                   "toEntity":"mps_PREGLEDI",
+                   "toAttribute":"ID_BR_FAJLA",
+                   "fromEntity":"MPS_PACIJENTI",
+                   "name":"relation 11",
+                   "fromAttribute":"ID_BR_FAJLA"
+               }
+           ]
+      }
+   ]
+}    

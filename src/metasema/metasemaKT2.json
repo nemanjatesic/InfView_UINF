@@ -1,0 +1,852 @@
+{
+    "location": "data/Veliki Set Podataka",
+    "name": "Veliki set podataka - Fakultet",
+    "description": "Veliki set podataka",
+    "type": "mssql",
+    "packages": 
+    [
+        {
+            "name": "Serijske datoteke",
+            "type": "serial",
+            "entities": 
+            [
+                {
+                    "name": "Student",
+                    "type": "serial",
+                    "url": "Serijske Datoteke/Studenti.ser",
+                    "attributes": 
+                    [
+                        {   "name": "Struka",
+                            "type": "Char",
+                            "length": "1",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "BrojIndeksa",
+                            "type": "Numeric",
+                            "length": "6",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "Prezime",
+                            "type": "Varchar",
+                            "length": "20",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "ImeRoditelja",
+                            "type": "Varchar",
+                            "length": "20",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Ime",
+                            "type": "Varchar",
+                            "length": "20",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Pol",
+                            "type": "Char",
+                            "length": "1",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Jmbg",
+                            "type": "Char",
+                            "length": "13",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "DatumRodjenja",
+                            "type": "Datetime",
+                            "length": "25",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Adresa",
+                            "type": "Varchar",
+                            "length": "80",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Telefon",
+                            "type": "Varchar",
+                            "length": "20",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "NastavniPredmet",
+                    "type": "serial",
+                    "url": "Serijske Datoteke/NastavniPredmeti.ser",
+                    "attributes": 
+                    [
+                        {   "name": "OznakaPlana",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "SifraPredmeta",
+                            "type": "Varchar",
+                            "length": "5",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "NazivPredmeta",
+                            "type": "Varchar",
+                            "length": "80",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "TrajeSemestara",
+                            "type": "Numeric",
+                            "length": "2",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "BrojKredita",
+                            "type": "Numeric",
+                            "length": "3",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "StudijskiProgram",
+                    "type": "serial",
+                    "url": "Serijske Datoteke/StudijskiProgrami.ser",
+                    "attributes": 
+                    [
+                        {   "name": "OznakaPrograma",
+                            "type": "Char",
+                            "length": "4",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "NazivKojiSeStice",
+                            "type": "Varchar",
+                            "length": "80",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "NazivPrograma",
+                            "type": "Varchar",
+                            "length": "80",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "PlanStudijskogPrograma",
+                    "type": "serial",
+                    "url": "Serijske Datoteke/PlanStudijskogPrograma.ser",
+                    "attributes": 
+                    [
+                        {   "name": "OznakaPrograma",
+                            "type": "Char",
+                            "length": "4",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "OznakaPlana",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "SifraPredmeta",
+                            "type": "Varchar",
+                            "length": "5",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "GodinaPredmeta",
+                            "type": "Numeric",
+                            "length": "1",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "SemestarPredmeta",
+                            "type": "Numeric",
+                            "length": "2",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "TokStudija",
+                    "type": "serial",
+                    "url": "Serijske Datoteke/TokStudija.ser",
+                    "attributes": 
+                    [
+                        {   "name": "Struka",
+                            "type": "Char",
+                            "length": "1",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "BrojIndeksa",
+                            "type": "Numeric",
+                            "length": "6",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "OznakaPrograma",
+                            "type": "Char",
+                            "length": "4",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "SkolskaGodina",
+                            "type": "Char",
+                            "length": "4",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "GodinaStudija",
+                            "type": "Numeric",
+                            "length": "1",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "UpisujePoPlanu",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                }
+            ],
+            "relations":
+            [
+                {
+                    "toEntity":"StudijskiProgram",
+                    "toAttribute":"OZNAKA_PROGRAMA",
+                    "fromEntity":"PlanStudijskogPrograma",
+                    "name":"relation 1",
+                    "fromAttribute":"OZNAKA_PROGRAMA"
+                },
+                {
+                    "toEntity":"NastavniPredmet",
+                    "toAttribute":"SIFRA_PREDMETA",
+                    "fromEntity":"PlanStudijskogPrograma",
+                    "name":"relation 2",
+                    "fromAttribute":"SIFRA_PREDMETA"
+                },
+                {
+                    "toEntity":"Student",
+                    "toAttribute":"STRUKA",
+                    "fromEntity":"TokStudija",
+                    "name":"relation 3",
+                    "fromAttribute":"STRUKA"
+                },
+                {
+                    "toEntity":"StudijskiProgram",
+                    "toAttribute":"OZNAKA_PROGRAMA",
+                    "fromEntity":"TokStudija",
+                    "name":"relation 4",
+                    "fromAttribute":"OZNAKA_PROGRAMA"
+                }
+            ]
+        },
+        {
+            "name": "Sekvencijalne Datoteke",
+            "type": "sequential",
+            "entities": 
+            [
+                {
+                    "name": "Student",
+                    "type": "sequential",
+                    "url": "Sekvencijalne Datoteke/Studenti.sek",
+                    "attributes": 
+                    [
+                        {   "name": "Struka",
+                            "type": "Char",
+                            "length": "1",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "BrojIndeksa",
+                            "type": "Numeric",
+                            "length": "6",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "Prezime",
+                            "type": "Varchar",
+                            "length": "20",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "ImeRoditelja",
+                            "type": "Varchar",
+                            "length": "20",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Ime",
+                            "type": "Varchar",
+                            "length": "20",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Pol",
+                            "type": "Char",
+                            "length": "1",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Jmbg",
+                            "type": "Char",
+                            "length": "13",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "DatumRodjenja",
+                            "type": "Datetime",
+                            "length": "25",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Adresa",
+                            "type": "Varchar",
+                            "length": "80",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Telefon",
+                            "type": "Varchar",
+                            "length": "20",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "NastavniPredmet",
+                    "type": "sequential",
+                    "url": "Sekvencijalne Datoteke/NastavniPredmeti.sek",
+                    "attributes": 
+                    [
+                        {   "name": "OznakaPlana",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "SifraPredmeta",
+                            "type": "Varchar",
+                            "length": "5",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "NazivPredmeta",
+                            "type": "Varchar",
+                            "length": "80",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "TrajeSemestara",
+                            "type": "Numeric",
+                            "length": "2",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "BrojKredita",
+                            "type": "Numeric",
+                            "length": "3",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "StudijskiProgram",
+                    "type": "sequential",
+                    "url": "Sekvencijalne Datoteke/StudijskiProgrami.sek",
+                    "attributes": 
+                    [
+                        {   "name": "OznakaPrograma",
+                            "type": "Char",
+                            "length": "4",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "NazivKojiSeStice",
+                            "type": "Varchar",
+                            "length": "80",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "NazivPrograma",
+                            "type": "Varchar",
+                            "length": "80",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "PlanStudijskogPrograma",
+                    "type": "sequential",
+                    "url": "Sekvencijalne Datoteke/PlanStudijskogPrograma.sek",
+                    "attributes": 
+                    [
+                        {   "name": "OznakaPrograma",
+                            "type": "Char",
+                            "length": "4",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "OznakaPlana",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "SifraPredmeta",
+                            "type": "Varchar",
+                            "length": "5",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "GodinaPredmeta",
+                            "type": "Numeric",
+                            "length": "1",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "SemestarPredmeta",
+                            "type": "Numeric",
+                            "length": "2",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "TokStudija",
+                    "type": "sequential",
+                    "url": "Sekvencijalne Datoteke/TokStudija.sek",
+                    "attributes": 
+                    [
+                        {   "name": "Struka",
+                            "type": "Char",
+                            "length": "1",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "BrojIndeksa",
+                            "type": "Numeric",
+                            "length": "6",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "OznakaPrograma",
+                            "type": "Char",
+                            "length": "4",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "SkolskaGodina",
+                            "type": "Char",
+                            "length": "4",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "GodinaStudija",
+                            "type": "Numeric",
+                            "length": "1",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "UpisujePoPlanu",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                }
+            ],
+			"relations":
+            [
+                {
+                    "toEntity":"StudijskiProgram",
+                    "toAttribute":"OZNAKA_PROGRAMA",
+                    "fromEntity":"PlanStudijskogPrograma",
+                    "name":"relation 1",
+                    "fromAttribute":"OZNAKA_PROGRAMA"
+                },
+                {
+                    "toEntity":"NastavniPredmet",
+                    "toAttribute":"SIFRA_PREDMETA",
+                    "fromEntity":"PlanStudijskogPrograma",
+                    "name":"relation 2",
+                    "fromAttribute":"SIFRA_PREDMETA"
+                },
+                {
+                    "toEntity":"Student",
+                    "toAttribute":"STRUKA",
+                    "fromEntity":"TokStudija",
+                    "name":"relation 3",
+                    "fromAttribute":"STRUKA"
+                },
+                {
+                    "toEntity":"StudijskiProgram",
+                    "toAttribute":"OZNAKA_PROGRAMA",
+                    "fromEntity":"TokStudija",
+                    "name":"relation 4",
+                    "fromAttribute":"OZNAKA_PROGRAMA"
+                }
+            ]
+        },
+        {
+            "name": "Indeks - sekvencijalne datoteke",
+            "type": "indexedSequential",
+            "entities": 
+            [
+                {
+                    "name": "Student",
+                    "type": "indexedSequential",
+                    "url": "Indeks - Sekvencijalne Datoteke/Studenti.ind",
+                    "attributes": 
+                    [
+                        {   "name": "Struka",
+                            "type": "Char",
+                            "length": "1",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "BrojIndeksa",
+                            "type": "Numeric",
+                            "length": "6",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "Prezime",
+                            "type": "Varchar",
+                            "length": "20",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "ImeRoditelja",
+                            "type": "Varchar",
+                            "length": "20",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Ime",
+                            "type": "Varchar",
+                            "length": "20",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Pol",
+                            "type": "Char",
+                            "length": "1",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Jmbg",
+                            "type": "Char",
+                            "length": "13",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "DatumRodjenja",
+                            "type": "Datetime",
+                            "length": "25",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Adresa",
+                            "type": "Varchar",
+                            "length": "80",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "Telefon",
+                            "type": "Varchar",
+                            "length": "20",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "NastavniPredmet",
+                    "type": "indexedSequential",
+                    "url": "Indeks - Sekvencijalne Datoteke/NastavniPredmeti.ind",
+                    "attributes": 
+                    [
+                        {   "name": "OznakaPlana",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "SifraPredmeta",
+                            "type": "Varchar",
+                            "length": "5",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "NazivPredmeta",
+                            "type": "Varchar",
+                            "length": "80",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "TrajeSemestara",
+                            "type": "Numeric",
+                            "length": "2",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "BrojKredita",
+                            "type": "Numeric",
+                            "length": "3",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "StudijskiProgram",
+                    "type": "indexedSequential",
+                    "url": "Indeks - Sekvencijalne Datoteke/StudijskiProgrami.ind",
+                    "attributes": 
+                    [
+                        {   "name": "OznakaPrograma",
+                            "type": "Char",
+                            "length": "4",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "NazivKojiSeStice",
+                            "type": "Varchar",
+                            "length": "80",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "NazivPrograma",
+                            "type": "Varchar",
+                            "length": "80",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "PlanStudijskogPrograma",
+                    "type": "indexedSequential",
+                    "url": "Indeks - Sekvencijalne Datoteke/PlanStudijskogPrograma.ind",
+                    "attributes": 
+                    [
+                        {   "name": "OznakaPrograma",
+                            "type": "Char",
+                            "length": "4",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "OznakaPlana",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "SifraPredmeta",
+                            "type": "Varchar",
+                            "length": "5",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "GodinaPredmeta",
+                            "type": "Numeric",
+                            "length": "1",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "SemestarPredmeta",
+                            "type": "Numeric",
+                            "length": "2",
+                            "mandatory": "false",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "TokStudija",
+                    "type": "indexedSequential",
+                    "url": "Indeks - Sekvencijalne Datoteke/TokStudija.ind",
+                    "attributes": 
+                    [
+                        {   "name": "Struka",
+                            "type": "Char",
+                            "length": "1",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "BrojIndeksa",
+                            "type": "Numeric",
+                            "length": "6",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "OznakaPrograma",
+                            "type": "Char",
+                            "length": "4",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "SkolskaGodina",
+                            "type": "Char",
+                            "length": "4",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "true"
+                        },
+                        {   "name": "GodinaStudija",
+                            "type": "Numeric",
+                            "length": "1",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        },
+                        {   "name": "UpisujePoPlanu",
+                            "type": "Char",
+                            "length": "2",
+                            "mandatory": "true",
+                            "group": "0",
+                            "primaryKey": "false"
+                        }
+                    ]
+                }
+            ],
+            "relations":
+            [
+                {
+                    "toEntity":"StudijskiProgram",
+                    "toAttribute":"OZNAKA_PROGRAMA",
+                    "fromEntity":"PlanStudijskogPrograma",
+                    "name":"relation 1",
+                    "fromAttribute":"OZNAKA_PROGRAMA"
+                },
+                {
+                    "toEntity":"NastavniPredmet",
+                    "toAttribute":"SIFRA_PREDMETA",
+                    "fromEntity":"PlanStudijskogPrograma",
+                    "name":"relation 2",
+                    "fromAttribute":"SIFRA_PREDMETA"
+                },
+                {
+                    "toEntity":"Student",
+                    "toAttribute":"STRUKA",
+                    "fromEntity":"TokStudija",
+                    "name":"relation 3",
+                    "fromAttribute":"STRUKA"
+                },
+                {
+                    "toEntity":"StudijskiProgram",
+                    "toAttribute":"OZNAKA_PROGRAMA",
+                    "fromEntity":"TokStudija",
+                    "name":"relation 4",
+                    "fromAttribute":"OZNAKA_PROGRAMA"
+                }
+            ]
+        }
+    ]
+}

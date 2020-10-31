@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/app/Main.java=UTF-8
+encoding//src/controller/INDListner.java=UTF-8
+encoding//src/model/db/UIDBFile.java=UTF-8
+encoding//src/model/file/UIAbstractFile.java=UTF-8
+encoding//src/model/file/UIINDFile.java=UTF-8
+encoding//src/model/file/UISEKFile.java=UTF-8
+encoding//src/model/file/UISERFile.java=UTF-8

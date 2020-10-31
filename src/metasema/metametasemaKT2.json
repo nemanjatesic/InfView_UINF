@@ -1,0 +1,291 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "location",
+    "name",
+    "description",
+    "type",
+    "packages"
+  ],
+  "properties": {
+    "location": {
+      "$id": "#/properties/location",
+      "type": "string",
+      "title": "The Location Schema",
+      "default": "",
+      "examples": [
+        "data/Veliki Set Podataka"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The Name Schema",
+      "default": "",
+      "examples": [
+        "Veliki set podataka - Fakultet"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "description": {
+      "$id": "#/properties/description",
+      "type": "string",
+      "title": "The Description Schema",
+      "default": "",
+      "examples": [
+        "Veliki set podataka"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "type": {
+      "$id": "#/properties/type",
+      "type": "string",
+      "title": "The Type Schema",
+      "default": "",
+      "examples": [
+        "mssql"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "packages": {
+      "$id": "#/properties/packages",
+      "type": "array",
+      "title": "The Packages Schema",
+      "items": {
+        "$id": "#/properties/packages/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "name",
+          "type",
+          "entities",
+          "relations"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#/properties/packages/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "examples": [
+              "Serijske datoteke"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "type": {
+            "$id": "#/properties/packages/items/properties/type",
+            "type": "string",
+            "title": "The Type Schema",
+            "default": "",
+            "examples": [
+              "serial"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "entities": {
+            "$id": "#/properties/packages/items/properties/entities",
+            "type": "array",
+            "title": "The Entities Schema",
+            "items": {
+              "$id": "#/properties/packages/items/properties/entities/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "name",
+                "type",
+                "url",
+                "attributes"
+              ],
+              "properties": {
+                "name": {
+                  "$id": "#/properties/packages/items/properties/entities/items/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema",
+                  "default": "",
+                  "examples": [
+                    "Student"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "type": {
+                  "$id": "#/properties/packages/items/properties/entities/items/properties/type",
+                  "type": "string",
+                  "title": "The Type Schema",
+                  "default": "",
+                  "examples": [
+                    "serial"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "url": {
+                  "$id": "#/properties/packages/items/properties/entities/items/properties/url",
+                  "type": "string",
+                  "title": "The Url Schema",
+                  "default": "",
+                  "examples": [
+                    "Serijske datoteke/Studenti.ser"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "attributes": {
+                  "$id": "#/properties/packages/items/properties/entities/items/properties/attributes",
+                  "type": "array",
+                  "title": "The Attributes Schema",
+                  "items": {
+                    "$id": "#/properties/packages/items/properties/entities/items/properties/attributes/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "name",
+                      "type",
+                      "length",
+                      "mandatory",
+                      "group",
+                      "primaryKey"
+                    ],
+                    "properties": {
+                      "name": {
+                        "$id": "#/properties/packages/items/properties/entities/items/properties/attributes/items/properties/name",
+                        "type": "string",
+                        "title": "The Name Schema",
+                        "default": "",
+                        "examples": [
+                          "Struka"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "type": {
+                        "$id": "#/properties/packages/items/properties/entities/items/properties/attributes/items/properties/type",
+                        "type": "string",
+                        "title": "The Type Schema",
+                        "default": "",
+                        "examples": [
+                          "Char"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "length": {
+                        "$id": "#/properties/packages/items/properties/entities/items/properties/attributes/items/properties/length",
+                        "type": "string",
+                        "title": "The Length Schema",
+                        "default": "",
+                        "examples": [
+                          "1"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "mandatory": {
+                        "$id": "#/properties/packages/items/properties/entities/items/properties/attributes/items/properties/mandatory",
+                        "type": "string",
+                        "title": "The Mandatory Schema",
+                        "default": "",
+                        "examples": [
+                          "true"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "group": {
+                        "$id": "#/properties/packages/items/properties/entities/items/properties/attributes/items/properties/group",
+                        "type": "string",
+                        "title": "The Group Schema",
+                        "default": "",
+                        "examples": [
+                          "0"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "primaryKey": {
+                        "$id": "#/properties/packages/items/properties/entities/items/properties/attributes/items/properties/primaryKey",
+                        "type": "string",
+                        "title": "The Primarykey Schema",
+                        "default": "",
+                        "examples": [
+                          "true"
+                        ],
+                        "pattern": "^(.*)$"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "relations": {
+            "$id": "#/properties/packages/items/properties/relations",
+            "type": "array",
+            "title": "The Relations Schema",
+            "items": {
+              "$id": "#/properties/packages/items/properties/relations/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "toEntity",
+                "toAttribute",
+                "fromEntity",
+                "name",
+                "fromAttribute"
+              ],
+              "properties": {
+                "toEntity": {
+                  "$id": "#/properties/packages/items/properties/relations/items/properties/toEntity",
+                  "type": "string",
+                  "title": "The Toentity Schema",
+                  "default": "",
+                  "examples": [
+                    "StudijskiProgram"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "toAttribute": {
+                  "$id": "#/properties/packages/items/properties/relations/items/properties/toAttribute",
+                  "type": "string",
+                  "title": "The Toattribute Schema",
+                  "default": "",
+                  "examples": [
+                    "OZNAKA_PROGRAMA"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "fromEntity": {
+                  "$id": "#/properties/packages/items/properties/relations/items/properties/fromEntity",
+                  "type": "string",
+                  "title": "The Fromentity Schema",
+                  "default": "",
+                  "examples": [
+                    "PlanStudijskogPrograma"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "name": {
+                  "$id": "#/properties/packages/items/properties/relations/items/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema",
+                  "default": "",
+                  "examples": [
+                    "relation 1"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "fromAttribute": {
+                  "$id": "#/properties/packages/items/properties/relations/items/properties/fromAttribute",
+                  "type": "string",
+                  "title": "The Fromattribute Schema",
+                  "default": "",
+                  "examples": [
+                    "OZNAKA_PROGRAMA"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

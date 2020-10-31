@@ -1,0 +1,8 @@
+tree/PlanStudijskogPrograma.tree
+overZone/PlanStudijskogPrograma.over
+path/PlanStudijskogPrograma.stxt
+field/OZNAKA_PROGRAMA/TYPE_CHAR/4/true
+field/OZNAKA_PLANA/TYPE_CHAR/2/true
+field/SIFRA_PREDMETA/TYPE_VARCHAR/5/true
+field/GODINA_PREDMETA/TYPE_NUMERIC/1/false
+field/SEMESTAR_PREDMETA/TYPE_NUMERIC/2/false

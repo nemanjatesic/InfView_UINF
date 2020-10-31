@@ -1,0 +1,189 @@
+{
+  "entities":
+  [
+    {
+      "name": "CLAN",
+      "attributes":
+      [
+        {
+          "name": "ID_CLANA",
+          "type": "Varchar",
+          "length": "5",
+          "mandatory": "true",
+          "default": "null",
+          "primaryKey": "true"
+        },
+        {
+          "name": "IME",
+          "type": "Varchar",
+          "length": "20",
+          "mandatory": "true",
+          "default": "null",
+          "primaryKey": "false"
+        },
+        {
+          "name": "PREZIME",
+          "type": "Varchar",
+          "length": "20",
+          "mandatory": "true",
+          "default": "null",
+          "primaryKey": "false"
+        },
+        {
+          "name": "DATUM_RODJENJA",
+          "type": "Date",
+          "length": "20",
+          "mandatory": "false",
+          "default": "null",
+          "primaryKey": "false"
+        },
+        {
+          "name": "TELEFON",
+          "type": "Varchar",
+          "length": "30",
+          "mandatory": "true",
+          "default": "null",
+          "primaryKey": "false"
+        },
+        {
+          "name": "ADRESA",
+          "type": "Varchar",
+          "length": "60",
+          "mandatory": "false",
+          "default": "null",
+          "primaryKey": "false"
+        },
+        {
+          "name": "POL",
+          "type": "Varchar",
+          "length": "1",
+          "mandatory": "false",
+          "default": "null",
+          "primaryKey": "false"
+        }
+      ]
+    },
+    {
+      "name": "ZADUZENJE",
+      "attributes":
+      [
+        {
+          "name": "ID_CLANA",
+          "type": "Varchar",
+          "length": "5",
+          "mandatory": "true",
+          "default": "null",
+          "primaryKey": "true"
+        },
+        {
+          "name": "ID_KNJIGE",
+          "type": "Varchar",
+          "length": "30",
+          "mandatory": "true",
+          "default": "null",
+          "primaryKey": "true"
+        },
+        {
+          "name": "DATUM_ZADUZENJA",
+          "type": "Date",
+          "length": "20",
+          "mandatory": "true",
+          "default": "null",
+          "primaryKey": "false"
+        },
+        {
+          "name": "VRATIO",
+          "type": "Boolean",
+          "length": "1",
+          "mandatory": "true",
+          "default": "null",
+          "primaryKey": "false"
+        }
+      ]
+    },
+    {
+      "name": "KNJIGA",
+      "attributes":
+      [
+        {
+          "name": "ID_KNJIGE",
+          "type": "Varchar",
+          "length": "30",
+          "mandatory": "true",
+          "default": "null",
+          "primaryKey": "true"
+        },
+        {
+          "name": "NAZIV",
+          "type": "Varchar",
+          "length": "50",
+          "mandatory": "true",
+          "default": "null",
+          "primaryKey": "false"
+        },
+        {
+          "name": "PISAC",
+          "type": "Varchar",
+          "length": "30",
+          "mandatory": "true",
+          "default": "null",
+          "primaryKey": "false"
+        },
+        {
+          "name": "ZANR",
+          "type": "Varchar",
+          "length": "5",
+          "mandatory": "true",
+          "default": "null",
+          "primaryKey": "false"
+        }
+      ]
+    },
+    {
+      "name": "ZANR",
+      "attributes":
+      [
+        {
+          "name": "ID_ZANRA",
+          "type": "Varchar",
+          "length": "5",
+          "mandatory": "true",
+          "default": "null",
+          "primaryKey": "true"
+        },
+        {
+          "name": "NAZIV",
+          "type": "Varchar",
+          "length": "20",
+          "mandatory": "true",
+          "default": "null",
+          "primaryKey": "false"
+        }
+      ]
+    }
+  ],
+  "relations":
+  [
+    {
+      "toEntity": "ZADUZENJE",
+      "toAttribute": "ID_CLANA",
+      "fromEntity": "CLAN",
+      "fromAttribute": "ID_CLANA",
+      "name": "relation 1"
+    },
+    {
+      "toEntity": "ZADUZENJE",
+      "toAttribute": "ID_KNJIGE",
+      "fromEntity": "KNJIGA",
+      "fromAttribute": "ID_KNJIGE",
+      "name": "relation 2"
+    },
+    {
+      "toEntity": "KNJIGA",
+      "toAttribute": "ZANR",
+      "fromEntity": "ZANR",
+      "fromAttribute": "ID_ZANRA",
+      "name": "relation 3"
+    }
+  ]
+}
